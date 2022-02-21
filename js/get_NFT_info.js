@@ -4,6 +4,7 @@ let getnftownerbtn = document.getElementById("getnftowner_button");
 let registerbtn = document.getElementById("register_button");
 let registermarketbtn = document.getElementById("register_market_button");
 let getnftvaluebtn = document.getElementById("getnftvalue_button");
+let buynftbtn = document.getElementById("buy-nft");
 
 
 let requestJSONInfoEvent = async () => {
@@ -114,9 +115,25 @@ let getvalueevent = async() => {
 
 }
 
+let buynftevent = async() => {
+    let tokenIdInput = document.getElementById("token-id-nft");
+    let tokenId = tokenIdInput.value;
+    if (!tokenId){
+        alert("토큰 아이디를 입력해주세요.");
+        tokenIdInput.focus();
+        return;
+    }
+    console.log("토큰아이디: ",tokenId);
+
+    //buyimgnft token
+    
+
+}
+
 
 requestJSONInfoBtn.addEventListener("click", requestJSONInfoEvent);
 getnftownerbtn.addEventListener("click",getownerevent);
 registerbtn.addEventListener("click",registerbtnevent);
 registermarketbtn.addEventListener("click",registermarketevent);
 getnftvaluebtn.addEventListener("click",getvalueevent);
+buynftbtn.addEventListener("click",buynftevent);

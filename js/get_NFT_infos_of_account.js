@@ -5,10 +5,10 @@ const getContractInstance = async () => {
     await fetch('./abi/nft_abi.json')
     .then(response => response.json())
     .then(data => {
-        // console.log(data)
         
+        //connect to NFTToken contract(Ropsten test network)
         let contract_abi = data;
-        let contract_address = "0xa484c6Fd18808712693d725A4E6Cb9a45205D731";
+        let contract_address = "0x10585D502ede54E456509E6847987dc7cC3734c4";
         
         contract = new web3.eth.Contract(contract_abi, contract_address)
     });
@@ -45,6 +45,7 @@ const showNFTInfoEachAccount = async (contract) => {
     let i = 1;
     while (true) {
         try {
+            console.log(i)
             // NFT id 별 account 불러오기
             let ntf_infos = {account: null, token_id: 0};
 
