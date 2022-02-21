@@ -2,7 +2,7 @@
 
 node.js 설치
 
-npm install -g live-server 
+npm install -g live-server && 
 npm install web3
 
 cd Sphinx-web3
