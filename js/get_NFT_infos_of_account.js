@@ -8,12 +8,49 @@ const getContractInstance = async () => {
         
         //connect to NFTToken contract(Ropsten test network)
         let contract_abi = data;
-        let contract_address = "0x10585D502ede54E456509E6847987dc7cC3734c4";
+        let contract_address = "0x0366f1f1143397Ee686EFCD083a4Ec20688E6073";
         
         contract = new web3.eth.Contract(contract_abi, contract_address)
     });
 
-    return contract
+    return contract;
+
+}
+
+const getTokenContractInstance = async () => {
+
+    let tokenContract;
+    // Contract 불러오기 및 NFT 정보 확인
+    await fetch('./abi/token_abi.json')
+    .then(response => response.json())
+    .then(data => {
+        
+        //connect to NFTToken contract(Ropsten test network)
+        let contract_abi = data;
+        let contract_address = "0xBf52b4C9125c0EfBfb2E271eb52D889a4d289468";
+        
+        tokenContract = new web3.eth.Contract(contract_abi, contract_address)
+    });
+
+    return tokenContract;
+}
+
+//비율 컨트랙트 연결
+const getRatioContractInstance = async() => {
+    let ratioContract;
+    // Contract 불러오기 및 NFT 정보 확인
+    await fetch('./abi/ratio.json')
+    .then(response => response.json())
+    .then(data => {
+        
+        //connect to NFTToken contract(Ropsten test network)
+        let contract_abi = data;
+        let contract_address = "0xA26949508419dA1611Ca6407ED728c75D40cF579";
+        
+        ratioContract = new web3.eth.Contract(contract_abi, contract_address)
+    });
+
+    return ratioContract;
 }
 
 // NFT 잔액 확인

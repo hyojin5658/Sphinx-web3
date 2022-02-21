@@ -112,6 +112,28 @@
 
     <div style="border: 1px solid black; height: 0;"></div>
 
+    <h2>토큰 잔액 확인 </h2>
+    <div>
+        <button id="balance_btn">check</button>
+        <label for="token_id">address</label>
+        <input type="text" id="balance_address">
+        <div id="balance_info" style="margin-top: 10px;">
+        </div>
+    </div>
+
+    <div style="border: 1px solid black; height: 0;"></div>
+
+    <h2>Churr 구매</h2>
+    <div>
+        <button id="buy_token">Buy</button>
+        <label for="token_id">토큰 구매 개수 (1wei = 1churr)</label>
+        <input type="text" id="buy_token_amount">
+        <div id="weapon_info" style="margin-top: 10px;">
+        </div>
+    </div>
+
+    <div style="border: 1px solid black; height: 0;"></div>
+
     <h2>NFT 구매</h2>
     <div>
         <label for="token-id">토큰 ID: </label>
@@ -119,6 +141,36 @@
         <br>
         <button id="buy-nft" style="margin-top: 10px;">buy</button>
         <div id="send-nft-status"></div>
+    </div>
+    
+    <div style="border: 1px solid black; height: 0;"></div>
+
+    <br><br>
+
+    <h2>게임 비율 조회( )</h2>
+    <div>
+        <label for="game_id_">게임1:  </label>
+        <input type="text" id="game_name_1" min="1" value="">
+        <label for="token-id">게임2:  </label>
+        <input type="text" id="game_name_2" min="1" value="">
+        <br>
+        <button id="get_game_ratio" style="margin-top: 10px;">get</button>
+        <div id="get_game_ratio_div"></div>
+    </div>
+    
+    <div style="border: 1px solid black; height: 0;"></div>
+
+
+    <h2>게임 비율 등록</h2>
+    <div>
+        <label for="token-id">게임1: </label>
+        <input type="text" id="game_register_1" min="1" value="">
+        <label for="token-id">게임2:  </label>
+        <input type="text" id="game_register_2" min="1" value="">
+        <br>
+        1:<input type="number" id="game_register_num" min="1" value="">
+        <button id="register_game_ratio_btn" style="margin-top: 10px;">register</button>
+        <div id="register_game_ratio_div"></div>
     </div>
     
     <div style="border: 1px solid black; height: 0;"></div>
